@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fwc_album_app/app/core/styles/button_styles.dart';
-import 'package:fwc_album_app/app/core/styles/colors_app.dart';
-import '../../core/styles/text_styles.dart';
+import 'package:fwc_album_app/app/core/ui/styles/button_styles.dart';
+import 'package:fwc_album_app/app/core/ui/styles/colors_app.dart';
+import '../../core/ui/styles/text_styles.dart';
+import '../../core/ui/widgets/button.dart';
 
 class SpashPage extends StatelessWidget {
   const SpashPage({Key? key}) : super(key: key);
@@ -9,7 +10,7 @@ class SpashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
+      //  backgroundColor: Colors.red,
       appBar: AppBar(title: const Text("Splash")),
       body: Center(
         child: Column(
@@ -24,7 +25,17 @@ class SpashPage extends StatelessWidget {
               child: const Text("Salvar"),
               onPressed: () {},
             ),
-            TextField()
+            const TextField(),
+            Button(
+              style: ButtonStyles.i.yellowButton,
+              labelStyle: context.textStyles.textPrimaryFontBold,
+              label: 'Salvar',
+              onPressed: () {},
+            ),
+            Button.primary(
+              label: 'Salvar',
+              onPressed: () {},
+            ),
           ],
         ),
       ),

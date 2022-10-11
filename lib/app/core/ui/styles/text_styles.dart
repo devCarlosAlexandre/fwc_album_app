@@ -4,7 +4,6 @@ import 'colors_app.dart';
 
 class TextStyles {
   static TextStyles? _instance;
-  // Avoid self isntance
   TextStyles._();
   static TextStyles get i {
     _instance ??= TextStyles._();

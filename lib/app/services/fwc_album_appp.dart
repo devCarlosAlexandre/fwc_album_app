@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fwc_album_app/app/core/theme/theme_config.dart';
+import 'package:fwc_album_app/app/core/ui/theme/theme_config.dart';
 import 'package:fwc_album_app/app/pages/spalsh/splash_page.dart';
 
 class FwcAlbumApp extends StatelessWidget {
