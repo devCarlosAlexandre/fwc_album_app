@@ -1,29 +1,32 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:fwc_album_app/app/core/styles/button_styles.dart';
+import 'package:fwc_album_app/app/core/styles/colors_app.dart';
+import '../../core/styles/text_styles.dart';
 
-class SplahPage extends StatelessWidget {
-  const SplahPage({Key? key}) : super(key: key);
+class SpashPage extends StatelessWidget {
+  const SpashPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Theme(
-      data: ThemeData(
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.white,
-          elevation: 0,
-          centerTitle: true,
-          iconTheme: IconThemeData(
-            color: Colors.black,
-          ),
-          titleTextStyle: TextStyle(
-            color: Colors.black,
-          ),
+    return Scaffold(
+      backgroundColor: Colors.red,
+      appBar: AppBar(title: const Text("Splash")),
+      body: Center(
+        child: Column(
+          children: [
+            ElevatedButton(
+              style: ButtonStyles.i.primaryButton,
+              child: const Text("Salvar"),
+              onPressed: () {},
+            ),
+            OutlinedButton(
+              style: ButtonStyles.i.primaryOutlineButton,
+              child: const Text("Salvar"),
+              onPressed: () {},
+            ),
+            TextField()
+          ],
         ),
-      ),
-      child: Scaffold(
-        appBar: AppBar(title: const Text("Splash")),
-        body: Container(),
       ),
     );
   }

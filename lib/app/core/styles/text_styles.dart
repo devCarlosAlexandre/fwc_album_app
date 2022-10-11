@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'colors_app.dart';
+
 class TextStyles {
   static TextStyles? _instance;
   // Avoid self isntance
@@ -40,4 +42,11 @@ class TextStyles {
 
   TextStyle get textSecondaryFontExtraBold =>
       TextStyle(fontWeight: FontWeight.w800, fontFamily: secondaryFont);
+
+  TextStyle get labelTextFiel =>
+      textSecondaryFontRegular.copyWith(color: ColorsApp.i.greyDark);
+}
+
+extension TextStyleExtension on BuildContext {
+  TextStyles get textStyles => TextStyles.i;
 }
