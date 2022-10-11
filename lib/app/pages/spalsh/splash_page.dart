@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:fwc_album_app/app/core/ui/helpers/loader.dart';
 import 'package:fwc_album_app/app/core/ui/styles/button_styles.dart';
-import 'package:fwc_album_app/app/core/ui/styles/colors_app.dart';
 import '../../core/ui/styles/text_styles.dart';
 import '../../core/ui/widgets/button.dart';
 
-class SpashPage extends StatelessWidget {
+class SpashPage extends StatefulWidget {
   const SpashPage({Key? key}) : super(key: key);
 
+  @override
+  State<SpashPage> createState() => _SpashPageState();
+}
+
+class _SpashPageState extends State<SpashPage> with Loader {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +23,11 @@ class SpashPage extends StatelessWidget {
             ElevatedButton(
               style: ButtonStyles.i.primaryButton,
               child: const Text("Salvar"),
-              onPressed: () {},
+              onPressed: () async {
+                showLoader();
+                await Future.delayed(Duration(seconds: 2));
+                hideLoader();
+              },
             ),
             OutlinedButton(
               style: ButtonStyles.i.primaryOutlineButton,
