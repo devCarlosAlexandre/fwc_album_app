@@ -7,9 +7,24 @@ class SplahPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("Splash")),
-      body: Container(),
+    return Theme(
+      data: ThemeData(
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.white,
+          elevation: 0,
+          centerTitle: true,
+          iconTheme: IconThemeData(
+            color: Colors.black,
+          ),
+          titleTextStyle: TextStyle(
+            color: Colors.black,
+          ),
+        ),
+      ),
+      child: Scaffold(
+        appBar: AppBar(title: const Text("Splash")),
+        body: Container(),
+      ),
     );
   }
 }
