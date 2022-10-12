@@ -12,7 +12,7 @@ class FwcAlbumApp extends StatelessWidget {
       theme: ThemeConfig.theme,
       debugShowCheckedModeBanner: false,
       routes: {
-        '/': (_) => const SpashPage(),
+        '/': (_) => const SplashPage(),
       },
     );
   }
