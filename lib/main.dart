@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:fwc_album_app/app/services/fwc_album_appp.dart';
+import 'package:fwc_album_app/app/fwc_album_appp.dart';
 
-void main() {
+import 'app/core/config/env/env.dart';
+
+void main() async {
+  await Env.i.load();
   runApp(const FwcAlbumApp());
 }
-

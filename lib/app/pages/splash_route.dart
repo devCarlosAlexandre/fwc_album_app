@@ -1,5 +1,3 @@
-import 'dart:js';
-
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_getit/flutter_getit.dart';
 import 'package:fwc_album_app/app/pages/spalsh/presenter/splash_presenter.dart';
